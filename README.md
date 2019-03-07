@@ -3,7 +3,7 @@ An app using [Prism](https://github.com/PrismLibrary/Prism) and Unity for CS 481
 
 Allows the user to check the current weather in a variety of ways. 
 
-Uses [OpenWeatherMap](https://openweathermap.org/api) for weather data acquisition and [the Google Maps API] for the WebView map (which needs rehosting online).
+Uses [OpenWeatherMap](https://openweathermap.org/api) for weather data acquisition and [the Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) for the WebView map (which needs rehosting online).
 
 ## Does not include API key! You must edit the appropriate lines in ApiKeys.WeatherKey and map.html with your own key, which you can get here:
 https://openweathermap.org/api 
