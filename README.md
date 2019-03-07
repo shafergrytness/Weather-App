@@ -14,7 +14,7 @@ All functionality can be achieved with the free tier of the API.
 
 
 
-![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/MainPage.png "Main page")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/MainPage.png "Main Page")
 
 ![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/SearchByName.png "Search by Name")
 
