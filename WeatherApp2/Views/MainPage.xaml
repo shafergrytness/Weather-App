@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="WeatherApp2.Views.MainPage"
+             Title="MainPage"
+             Style="{StaticResource page_style}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource title_style}">
+                <Label.Text>
+                    Welcome to the WeatherApp! What would you like to do?
+                </Label.Text>
+            </Label>
+            <Button Style="{StaticResource button_style}"
+                Text="I want to check weather at specific locations"  
+                Command="{Binding NavToCheckCitiesPageCommand}" />
+            <Button Style="{StaticResource button_style}"
+                Text="I want to check with a map"  
+                Command="{Binding NavToMapsPageCommand}" />
+            <Button Style="{StaticResource button_style}"
+                Text="I want to check weather by zip code"  
+                Command="{Binding NavToCheckZipCodePageCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

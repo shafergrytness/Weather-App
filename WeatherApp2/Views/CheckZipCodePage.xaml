@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+       prism:ViewModelLocator.AutowireViewModel="True"
+       x:Class="WeatherApp2.Views.CheckZipCodePage"
+       Style="{StaticResource page_style}">
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <StackLayout>
+          <StackLayout Padding="10,10,10,10" HorizontalOptions="Center">
+            <Label Text="Search by Zip Code" Style="{StaticResource title_style}"/>
+            <Label x:Name="zipCodeLabel" Text="Zip Code" Style="{StaticResource title_style}" />
+            <Entry x:Name="zipCodeEntry" />
+          </StackLayout>
+          <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+            <Button x:Name="getWeatherBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" Style="{StaticResource button_style}"/>
+        </StackLayout>
+        </StackLayout>
+        <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                    <Label Text="Location:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+                        <Label Text="{Binding Title}" 
+                               Style="{StaticResource description_style}" 
+                               HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Temperature:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+            <Label x:Name="tempLabel" Text="{Binding Temperature}"
+                Style="{StaticResource description_style}" HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Wind Speed:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+                        <Label x:Name="windLabel" Text="{Binding Wind}" 
+                               Style="{StaticResource description_style}" 
+                               HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Humidity:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+            <Label x:Name="humidityLabel" Text="{Binding Humidity}"
+                Style="{StaticResource description_style}" HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Visibility:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+            <Label x:Name="visibilitylabel" Text="{Binding Visibility}"
+                Style="{StaticResource description_style}" HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Time of Sunrise:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+            <Label x:Name="sunriseLabel" Text="{Binding Sunrise}"
+                Style="{StaticResource description_style}" HorizontalOptions="Start"/>
+          </ContentView>
+                    <Label Text="Time of Sunset:" Style="{StaticResource description_style}" HorizontalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+          <ContentView>
+            <Label x:Name="sunsetLabel" Text="{Binding Sunset}"
+                Style="{StaticResource description_style}" HorizontalOptions="Start"/>
+          </ContentView>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

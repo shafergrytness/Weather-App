@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="WeatherApp2.Views.MapsPage"
+             Title="MapsPage">
+    <ContentPage.Content>
+        <WebView Source="http://cis444.cs.csusm.edu/grytn003/CS481/map.html"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"/>
+    </ContentPage.Content>
+</ContentPage>

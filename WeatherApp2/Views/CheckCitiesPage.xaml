@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="WeatherApp2.Views.CheckCitiesPage"
+    Title="CheckCitiesPage"
+    Style="{StaticResource page_style}">
+    <StackLayout>
+        <Label 
+            Style="{StaticResource title_style}"
+            Text="Enter cities you're interested in:"/>
+        <StackLayout>
+            <Entry
+                TextColor="#FFFFFF"
+                Text="{Binding LocationEnteredByUser}"
+                WidthRequest="200" />
+            <Button
+                Style="{StaticResource button_style}"
+                Text="Search Weather"
+                Command="{Binding GetWeatherForLocationCommand}" />
+        </StackLayout>
+        <ListView
+            x:Name="WeatherListView"
+            ItemsSource="{Binding WeatherCollection}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell
+                        x:Name="WeatherItemCell">
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                x:Name="MoreInfoButton"
+                                AutomationId="MoreInfoButton"
+                                BindingContext="{Binding Source={x:Reference WeatherListView}, Path=BindingContext}"
+                                Command="{Binding NavToMoreInfoPageCommand}"
+                                CommandParameter="{Binding Source={x:Reference WeatherItemCell}, Path=BindingContext}"
+                                Text="More Info" />
+                            <MenuItem
+                                x:Name="DeleteButton"
+                                AutomationId="DeleteButton"
+                                BindingContext="{Binding Source={x:Reference WeatherListView}, Path=BindingContext}"
+                                Command="{Binding DeleteItemCellCommand}"
+                                CommandParameter="{Binding Source={x:Reference WeatherItemCell}, Path=BindingContext}"
+                                Text="Delete" 
+                                IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <ViewCell.View>
+                            <StackLayout
+                                Orientation="Horizontal">
+                                <Label
+                                    Style="{StaticResource description_style}"
+                                    x:Name="LocationNameLabel"
+                                    Text="{Binding Name}"
+                                    VerticalOptions="Center"
+                                    Margin="8" />
+                                <Label
+                                    Style="{StaticResource description_style}"
+                                    x:Name="TemperatureLabel"
+                                    Text="{Binding Main.Temp, StringFormat='Temp.: {0}°'}"
+                                    VerticalOptions="Center"
+                                    Margin="2" />
+                                <Label
+                                    Style="{StaticResource description_style}"
+                                    x:Name="CloudLabel"
+                                    Text="{Binding Clouds.All, StringFormat='Clouds: {0}%'}"
+                                    VerticalOptions="Center"
+                                    Margin="2" />
+                                <Label
+                                    Style="{StaticResource description_style}"
+                                    x:Name="WindLabel"
+                                    Text="{Binding Wind.Speed, StringFormat='Winds: {0} mph'}"
+                                    VerticalOptions="Center"
+                                    Margin="2" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
