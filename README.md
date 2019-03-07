@@ -12,12 +12,12 @@ All functionality can be achieved with the free tier of the API.
 ## Some screenshots:
 (Form follows function!)
 
-![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/MainPage.png "Main page")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/MainPage.png "Main page")
 
-![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/SearchBName.png "Search by Name")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/SearchBName.png "Search by Name")
 
-![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/MoreInfo.png "More Info")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/MoreInfo.png "More Info")
 
-![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/Map.png "Map")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/Map.png "Map")
 
-![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/ZipCode.png "Zip Code")
+![alt text](https://github.com/shafergrytness/Weather-App/blob/master/Screenshots/ZipCode.png "Zip Code")
