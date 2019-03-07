@@ -1,8 +1,23 @@
-# WeatherApp2
-An app using Prism and Unity for CS 481 Week 9.
+# Weather App
+An app using [Prism](https://github.com/PrismLibrary/Prism) and Unity for CS 481 Week 9, done in the MVVM software design pattern. Developed using Xamarin.Forms, the app is deployable on both Android and iOS.
 
 Allows the user to check the current weather in a variety of ways. 
 
-## Does not include API key! You must edit the appropriate line in ApiKeys.WeatherKey with your own key, which you can get here:
+Uses [OpenWeatherMap](https://openweathermap.org/api) for weather data acquisition and [the Google Maps API] for the WebView map (which needs rehosting online).
+
+## Does not include API key! You must edit the appropriate lines in ApiKeys.WeatherKey and map.html with your own key, which you can get here:
 https://openweathermap.org/api 
 All functionality can be achieved with the free tier of the API. 
+
+## Some screenshots:
+(Form follows function!)
+
+![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/Main Page.png "Main page")
+
+![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/Search by Name.png "Search by Name")
+
+![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/More Info.png "More Info")
+
+![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/Map.png "Map")
+
+![alt text](https://github.com/shafergrytness/Weather-App/tree/master/Screenshots/Zip Code.png "Zip Code")
